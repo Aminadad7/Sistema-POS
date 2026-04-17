@@ -40,7 +40,7 @@ Sistema Punto de Venta modular y listo para producción construido con Python 3.
 ## Usuario por defecto
 
 - Usuario: `admin`
-- Contraseña: `admin123`
+- Contraseña: ``
 
 ## Notas
 
