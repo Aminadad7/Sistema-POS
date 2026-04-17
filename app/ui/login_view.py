@@ -1,6 +1,6 @@
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QPixmap
-from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QMessageBox
+from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QSizePolicy, QMessageBox
 from app.services.auth_service import AuthService
 from app.utils.settings_manager import get_setting
 
@@ -15,8 +15,6 @@ class LoginView(QWidget):
         self.setup_ui()
 
     def setup_ui(self):
-        self.setFixedSize(360, 320)
-
         self.logo_label = QLabel()
         self.logo_label.setFixedSize(100, 100)
         self.logo_label.setScaledContents(True)
@@ -41,24 +39,31 @@ class LoginView(QWidget):
 
         self.login_button = QPushButton('Entrar')
         self.login_button.clicked.connect(self.attempt_login)
+        self.login_button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
 
-        container = QWidget()
-        container_layout = QVBoxLayout(container)
-        container_layout.setAlignment(Qt.AlignCenter)
-        container_layout.setContentsMargins(0, 0, 0, 0)
-        container_layout.addWidget(self.logo_label)
-        container_layout.addWidget(title)
-        container_layout.addWidget(subtitle)
-        container_layout.addSpacing(16)
-        container_layout.addWidget(self.username_input)
-        container_layout.addWidget(self.password_input)
-        container_layout.addSpacing(14)
-        container_layout.addWidget(self.login_button)
+        content = QWidget()
+        content.setObjectName('loginContent')
+        content.setMaximumWidth(500)
+        content.setMinimumWidth(420)
+        content.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+
+        content_layout = QVBoxLayout(content)
+        content_layout.setAlignment(Qt.AlignTop | Qt.AlignHCenter)
+        content_layout.setContentsMargins(20, 20, 20, 20)
+        content_layout.addWidget(self.logo_label, alignment=Qt.AlignHCenter)
+        content_layout.addWidget(title, alignment=Qt.AlignHCenter)
+        content_layout.addWidget(subtitle, alignment=Qt.AlignHCenter)
+        content_layout.addSpacing(16)
+        content_layout.addWidget(self.username_input)
+        content_layout.addWidget(self.password_input)
+        content_layout.addSpacing(14)
+        content_layout.addWidget(self.login_button)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
-        layout.setAlignment(Qt.AlignCenter)
-        layout.addWidget(container, alignment=Qt.AlignCenter)
+        layout.addStretch(1)
+        layout.addWidget(content, alignment=Qt.AlignHCenter)
+        layout.addStretch(1)
         self.load_logo()
 
     def load_logo(self):

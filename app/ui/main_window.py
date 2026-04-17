@@ -69,10 +69,10 @@ class PosMainWindow(QMainWindow):
         self.user_label.setStyleSheet('color: #94a3b8; margin: 0 12px 16px;')
 
         self.btn_dashboard = create_sidebar_button('Dashboard')
-        self.btn_products = create_sidebar_button('Productos')
-        self.btn_clients = create_sidebar_button('Clientes')
-        self.btn_sales = create_sidebar_button('Ventas')
-        self.btn_reports = create_sidebar_button('Reportes')
+        self.btn_products = create_sidebar_button('Lista deProductos')
+        self.btn_clients = create_sidebar_button('Lista de Clientes')
+        self.btn_sales = create_sidebar_button('Crear Ventas')
+        self.btn_reports = create_sidebar_button('Inventarios')
         self.btn_settings = create_sidebar_button('Configuración')
         self.btn_logout = create_sidebar_button('Cerrar sesión')
 

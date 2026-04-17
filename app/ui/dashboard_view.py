@@ -54,7 +54,7 @@ class DashboardView(QWidget):
         self.client_stats_frame = QFrame()
         self.client_stats_frame.setStyleSheet(self.card_frame_style())
         self.client_stats_table = QTableWidget(0, 3)
-        self.client_stats_table.setHorizontalHeaderLabels(['Cliente', 'Ventas', 'Total RD$'])
+        # self.client_stats_table.setHorizontalHeaderLabels(['Cliente', 'Ventas', 'Total RD$'])
         self.configure_table(self.client_stats_table)
         self.setup_table_headers(self.client_stats_table, ['Cliente', 'Ventas', 'Total RD$'])
 
