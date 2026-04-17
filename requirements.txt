@@ -1,0 +1,8 @@
+PySide6>=6.5
+SQLAlchemy>=2.0
+bcrypt>=4.0
+python-dotenv>=1.0
+Jinja2>=3.1
+
+# Optional for PDF export
+reportlab>=4.0
