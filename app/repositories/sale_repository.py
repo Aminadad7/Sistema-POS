@@ -22,6 +22,12 @@ class SaleRepository(BaseRepository):
     def list_by_period(self, start_date, end_date) -> list[Sale]:
         return self.session.query(Sale).filter(Sale.created_at >= start_date, Sale.created_at <= end_date).order_by(Sale.created_at.desc()).all()
 
+    def list_all(self) -> list[Sale]:
+        return self.session.query(Sale).order_by(Sale.created_at.desc()).all()
+
+    def get_by_id(self, sale_id: int) -> Sale | None:
+        return self.session.query(Sale).filter(Sale.id == sale_id).one_or_none()
+
     def top_products(self, limit: int = 10) -> list[tuple[str, int]]:
         return (
             self.session.query(SaleItem.product_name, func.sum(SaleItem.quantity).label('total'))

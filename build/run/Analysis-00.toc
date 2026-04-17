@@ -1740,13 +1740,13 @@
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
-   'PYMODULE'),
   ('tracemalloc',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_py_abc.py',
    'PYMODULE'),
   ('stringprep',
    'C:\\Program '
@@ -1763,13 +1763,6 @@
   ('app',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos qt\\app\\__init__.py',
    'PYMODULE'),
-  ('app.ui.styles',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos qt\\app\\ui\\styles.py',
-   'PYMODULE'),
-  ('app.ui.settings_view',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\ui\\settings_view.py',
-   'PYMODULE'),
   ('app.utils.settings_manager',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\app\\utils\\settings_manager.py',
@@ -1781,6 +1774,13 @@
   ('app.utils.constants',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\app\\utils\\constants.py',
+   'PYMODULE'),
+  ('app.ui.styles',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos qt\\app\\ui\\styles.py',
+   'PYMODULE'),
+  ('app.ui.settings_view',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\app\\ui\\settings_view.py',
    'PYMODULE'),
   ('app.services.user_service',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -2647,22 +2647,6 @@
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\app\\ui\\report_view.py',
    'PYMODULE'),
-  ('app.services.report_service',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\services\\report_service.py',
-   'PYMODULE'),
-  ('app.utils.logger',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\utils\\logger.py',
-   'PYMODULE'),
-  ('app.repositories.sale_repository',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\repositories\\sale_repository.py',
-   'PYMODULE'),
-  ('app.ui.sales_view',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\ui\\sales_view.py',
-   'PYMODULE'),
   ('app.utils.pdf_generator',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\app\\utils\\pdf_generator.py',
@@ -3467,17 +3451,17 @@
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\reportlab\\lib\\__init__.py',
    'PYMODULE'),
-  ('app.services.sale_service',
+  ('app.services.report_service',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\services\\sale_service.py',
+   'qt\\app\\services\\report_service.py',
    'PYMODULE'),
-  ('app.services.product_service',
+  ('app.utils.logger',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\services\\product_service.py',
+   'qt\\app\\utils\\logger.py',
    'PYMODULE'),
-  ('app.repositories.product_repository',
+  ('app.repositories.sale_repository',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\repositories\\product_repository.py',
+   'qt\\app\\repositories\\sale_repository.py',
    'PYMODULE'),
   ('shiboken6',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3495,17 +3479,33 @@
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\support\\__init__.py',
    'PYMODULE'),
-  ('app.ui.client_view',
+  ('app.ui.sales_view',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\ui\\client_view.py',
+   'qt\\app\\ui\\sales_view.py',
+   'PYMODULE'),
+  ('app.services.sale_service',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\app\\services\\sale_service.py',
+   'PYMODULE'),
+  ('app.services.product_service',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\app\\services\\product_service.py',
+   'PYMODULE'),
+  ('app.services.client_service',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\app\\services\\client_service.py',
    'PYMODULE'),
   ('app.repositories.client_repository',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\app\\repositories\\client_repository.py',
    'PYMODULE'),
-  ('app.services.client_service',
+  ('app.repositories.product_repository',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\app\\services\\client_service.py',
+   'qt\\app\\repositories\\product_repository.py',
+   'PYMODULE'),
+  ('app.ui.client_view',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\app\\ui\\client_view.py',
    'PYMODULE'),
   ('app.ui.product_view',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3535,53 +3535,9 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\python313.dll',
    'BINARY'),
-  ('PySide6\\plugins\\iconengines\\qsvgicon.dll',
+  ('PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\iconengines\\qsvgicon.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qoffscreen.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qoffscreen.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qminimal.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qjpeg.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qjpeg.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qpdf.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qpdf.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qdirect2d.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qdirect2d.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qtga.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtga.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qwbmp.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\platforms\\qwindows.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qwindows.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qgif.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qicns.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qicns.dll',
-   'BINARY'),
-  ('PySide6\\plugins\\imageformats\\qwebp.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwebp.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
    'BINARY'),
   ('PySide6\\plugins\\imageformats\\qico.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3591,17 +3547,61 @@
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qsvg.dll',
    'BINARY'),
-  ('PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+  ('PySide6\\plugins\\iconengines\\qsvgicon.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwebp.dll',
    'BINARY'),
   ('PySide6\\plugins\\imageformats\\qtiff.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtiff.dll',
    'BINARY'),
-  ('PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+  ('PySide6\\plugins\\platforms\\qoffscreen.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qwbmp.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforminputcontexts\\qtvirtualkeyboardplugin.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qdirect2d.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qdirect2d.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qicns.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\platforms\\qwindows.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qpdf.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qpdf.dll',
+   'BINARY'),
+  ('PySide6\\plugins\\imageformats\\qtga.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\plugins\\imageformats\\qtga.dll',
    'BINARY'),
   ('PySide6\\opengl32sw.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3791,33 +3791,33 @@
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Core.dll',
    'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\VCRUNTIME140_1.dll',
+   'BINARY'),
   ('PySide6\\Qt6Gui.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Gui.dll',
    'BINARY'),
-  ('PySide6\\Qt6Svg.dll',
+  ('PySide6\\Qt6Network.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Svg.dll',
-   'BINARY'),
-  ('PySide6\\Qt6Pdf.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Pdf.dll',
-   'BINARY'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\VCRUNTIME140_1.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Network.dll',
    'BINARY'),
   ('shiboken6\\MSVCP140.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\shiboken6\\MSVCP140.dll',
    'BINARY'),
+  ('PySide6\\Qt6Svg.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Svg.dll',
+   'BINARY'),
   ('PySide6\\Qt6VirtualKeyboard.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6VirtualKeyboard.dll',
    'BINARY'),
-  ('PySide6\\Qt6Network.dll',
+  ('PySide6\\Qt6Pdf.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Network.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Pdf.dll',
    'BINARY'),
   ('PySide6\\Qt6Widgets.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3843,13 +3843,9 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\DLLs\\sqlite3.dll',
    'BINARY'),
-  ('PySide6\\MSVCP140.dll',
-   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\MSVCP140.dll',
-   'BINARY'),
-  ('PySide6\\pyside6.abi3.dll',
-   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\pyside6.abi3.dll',
+  ('shiboken6\\shiboken6.abi3.dll',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\shiboken6\\shiboken6.abi3.dll',
    'BINARY'),
   ('PySide6\\VCRUNTIME140.dll',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3863,9 +3859,13 @@
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\VCRUNTIME140_1.dll',
    'BINARY'),
-  ('shiboken6\\shiboken6.abi3.dll',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\shiboken6\\shiboken6.abi3.dll',
+  ('PySide6\\MSVCP140.dll',
+   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\MSVCP140.dll',
+   'BINARY'),
+  ('PySide6\\pyside6.abi3.dll',
+   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\pyside6.abi3.dll',
    'BINARY'),
   ('shiboken6\\VCRUNTIME140_1.dll',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3887,17 +3887,17 @@
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6Quick.dll',
    'BINARY'),
-  ('PySide6\\Qt6QmlModels.dll',
+  ('PySide6\\Qt6QmlMeta.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6QmlModels.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6QmlMeta.dll',
    'BINARY'),
   ('PySide6\\Qt6OpenGL.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6OpenGL.dll',
    'BINARY'),
-  ('PySide6\\Qt6QmlMeta.dll',
+  ('PySide6\\Qt6QmlModels.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6QmlMeta.dll',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\Qt6QmlModels.dll',
    'BINARY'),
   ('PySide6\\Qt6QmlWorkerScript.dll',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3905,25 +3905,25 @@
    'BINARY')],
  [],
  [],
- [('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
-   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+ [('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
    'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
-   'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
    'c:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -3938,77 +3938,221 @@
    'qt\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
-  ('PySide6\\translations\\qt_help_ja.qm',
+  ('PySide6\\translations\\qt_help_zh_CN.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ja.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_CN.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_hr.qm',
+  ('PySide6\\translations\\qt_help_gl.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hr.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_gl.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_ru.qm',
+  ('PySide6\\translations\\qt_help_tr.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ru.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_gl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_lv.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ka.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ka.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_da.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_da.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ca.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_nn.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ru.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_sk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sk.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_tr.qm',
    'DATA'),
   ('PySide6\\translations\\qt_ko.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ko.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_ka.qm',
+  ('PySide6\\translations\\qtbase_ru.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ka.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fi.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_fr.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_da.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ja.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ca.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_hu.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_es.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_gd.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_gd.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_cs.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_sl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_zh_TW.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_en.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_nl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_en.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fr.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_hu.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_uk.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_uk.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_es.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_es.qm',
    'DATA'),
+  ('PySide6\\translations\\qt_nl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ar.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pt_PT.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ja.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ar.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ar.qm',
+   'DATA'),
   ('PySide6\\translations\\qt_lt.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_lt.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_zh_CN.qm',
+  ('PySide6\\translations\\qt_bg.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_CN.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_bg.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_zh_TW.qm',
+  ('PySide6\\translations\\qtbase_sv.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_TW.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_gl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_gl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_pt_BR.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_sv.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_de.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_de.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_da.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_tr.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_fa.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_bg.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_nn.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_sl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_sk.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_cs.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_nn.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ko.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_cs.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ca.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_pl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_lv.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_uk.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ka.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ka.qm',
    'DATA'),
   ('PySide6\\translations\\qt_he.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
@@ -4018,401 +4162,293 @@
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_it.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_nl.qm',
+  ('PySide6\\translations\\qt_da.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_nl.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_da.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_fi.qm',
+  ('PySide6\\translations\\qt_help_ja.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fi.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_gl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ca.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_uk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_sl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_cs.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_fr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_sk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_sv.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_pt_BR.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ko.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_es.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fa.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fa.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_da.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ar.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_tr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_tr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_zh_TW.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_TW.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_he.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ja.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_sl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_uk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_tr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_zh_CN.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_CN.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_hu.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_hr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_hr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_gd.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_en.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_it.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_nn.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_en.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_sk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_ru.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ar.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_es.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_es.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_bg.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_uk.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_bg.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_pl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_pt_BR.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_tr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_tr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_pt_BR.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_BR.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_nn.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nn.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_de.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_de.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_en.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fi.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_fr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_gd.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_gd.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_it.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_it.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_ka.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ka.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_fr.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_sv.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sv.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_hu.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_ar.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_cs.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_hu.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hu.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_pl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_de.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_zh_CN.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_CN.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_bg.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_nl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_nl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qt_help_pl.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_pl.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_fa.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fa.qm',
-   'DATA'),
-  ('PySide6\\translations\\qtbase_zh_TW.qm',
-   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_TW.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ja.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_de.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_de.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_sv.qm',
+  ('PySide6\\translations\\qtbase_hr.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sv.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hr.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_lg.qm',
+  ('PySide6\\translations\\qt_help_ka.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lg.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ka.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_lg.qm',
+  ('PySide6\\translations\\qtbase_ca.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_lg.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ca.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_nl.qm',
+  ('PySide6\\translations\\qtbase_fi.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nl.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fi.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_pt_PT.qm',
+  ('PySide6\\translations\\qtbase_fr.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_PT.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_it.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_bg.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_ru.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ar.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_de.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_en.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_he.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_he.qm',
    'DATA'),
   ('PySide6\\translations\\qt_help_hr.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_hr.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_cs.qm',
+  ('PySide6\\translations\\qt_sk.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_cs.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_sk.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_ko.qm',
+  ('PySide6\\translations\\qtbase_sk.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ko.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_sk.qm',
    'DATA'),
-  ('PySide6\\translations\\qtbase_ja.qm',
+  ('PySide6\\translations\\qt_zh_CN.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ja.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_tr.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_uk.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_sv.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_sv.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_help_zh_TW.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_zh_TW.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_hr.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_hr.qm',
    'DATA'),
   ('PySide6\\translations\\qt_lv.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_lv.qm',
    'DATA'),
-  ('PySide6\\translations\\qt_help_ca.qm',
+  ('PySide6\\translations\\qt_lg.qm',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
-   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_help_ca.qm',
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_lg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_ko.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_hu.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_es.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_pt_BR.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_it.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_gd.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_pl.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_fa.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_fa.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_nn.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ru.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_zh_CN.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_pt_BR.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_pt_BR.qm',
+   'DATA'),
+  ('PySide6\\translations\\qtbase_lg.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qtbase_lg.qm',
+   'DATA'),
+  ('PySide6\\translations\\qt_ka.qm',
+   'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
+   'qt\\.venv\\Lib\\site-packages\\PySide6\\translations\\qt_ka.qm',
    'DATA'),
   ('base_library.zip',
    'C:\\Users\\amina\\OneDrive\\Escritorio\\Sistema Pos '
    'qt\\build\\run\\base_library.zip',
    'DATA')],
- [('functools',
+ [('linecache',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\functools.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py',
    'PYMODULE'),
-  ('operator',
+  ('types',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\operator.py',
-   'PYMODULE'),
-  ('traceback',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\traceback.py',
-   'PYMODULE'),
-  ('posixpath',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\posixpath.py',
-   'PYMODULE'),
-  ('stat',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\stat.py',
-   'PYMODULE'),
-  ('os',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\os.py',
-   'PYMODULE'),
-  ('sre_parse',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_parse.py',
-   'PYMODULE'),
-  ('abc',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\abc.py',
-   'PYMODULE'),
-  ('codecs',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\codecs.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\types.py',
    'PYMODULE'),
   ('copyreg',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py',
    'PYMODULE'),
-  ('warnings',
+  ('sre_compile',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py',
-   'PYMODULE'),
-  ('genericpath',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\genericpath.py',
-   'PYMODULE'),
-  ('linecache',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py',
-   'PYMODULE'),
-  ('collections',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py',
-   'PYMODULE'),
-  ('ntpath',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\ntpath.py',
-   'PYMODULE'),
-  ('enum',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\enum.py',
-   'PYMODULE'),
-  ('heapq',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\heapq.py',
-   'PYMODULE'),
-  ('keyword',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py',
-   'PYMODULE'),
-  ('io',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\io.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_compile.py',
    'PYMODULE'),
   ('locale',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\locale.py',
    'PYMODULE'),
-  ('sre_compile',
+  ('re._parser',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_compile.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py',
+   'PYMODULE'),
+  ('re._constants',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py',
+   'PYMODULE'),
+  ('re._compiler',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py',
+   'PYMODULE'),
+  ('re._casefix',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py',
+   'PYMODULE'),
+  ('re',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py',
+   'PYMODULE'),
+  ('os',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\os.py',
+   'PYMODULE'),
+  ('codecs',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\codecs.py',
+   'PYMODULE'),
+  ('posixpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\posixpath.py',
+   'PYMODULE'),
+  ('warnings',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py',
    'PYMODULE'),
   ('_collections_abc',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_collections_abc.py',
+   'PYMODULE'),
+  ('sre_parse',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_parse.py',
+   'PYMODULE'),
+  ('operator',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\operator.py',
+   'PYMODULE'),
+  ('io',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\io.py',
+   'PYMODULE'),
+  ('keyword',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py',
+   'PYMODULE'),
+  ('ntpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\ntpath.py',
+   'PYMODULE'),
+  ('heapq',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\heapq.py',
+   'PYMODULE'),
+  ('sre_constants',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_constants.py',
+   'PYMODULE'),
+  ('enum',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\enum.py',
+   'PYMODULE'),
+  ('abc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\abc.py',
+   'PYMODULE'),
+  ('_weakrefset',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_weakrefset.py',
+   'PYMODULE'),
+  ('genericpath',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\genericpath.py',
+   'PYMODULE'),
+  ('traceback',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\traceback.py',
+   'PYMODULE'),
+  ('functools',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\functools.py',
+   'PYMODULE'),
+  ('reprlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py',
+   'PYMODULE'),
+  ('weakref',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\weakref.py',
+   'PYMODULE'),
+  ('stat',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\stat.py',
    'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Program '
@@ -4902,43 +4938,7 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
-  ('re._parser',
+  ('collections',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py',
-   'PYMODULE'),
-  ('re._constants',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py',
-   'PYMODULE'),
-  ('re._compiler',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py',
-   'PYMODULE'),
-  ('re._casefix',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py',
-   'PYMODULE'),
-  ('re',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py',
-   'PYMODULE'),
-  ('weakref',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\weakref.py',
-   'PYMODULE'),
-  ('types',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\types.py',
-   'PYMODULE'),
-  ('sre_constants',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\sre_constants.py',
-   'PYMODULE'),
-  ('reprlib',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py',
-   'PYMODULE'),
-  ('_weakrefset',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\_weakrefset.py',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py',
    'PYMODULE')])

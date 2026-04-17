@@ -85,7 +85,7 @@ QMainWindow {
 }
 QWidget, QFrame, QStackedWidget {
     background: #f3f4f6;
-    color: #0f172a;
+    color: #111827;
     font-family: Segoe UI, Arial, sans-serif;
     font-size: 12pt;
 }
@@ -107,22 +107,22 @@ QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QDateEdit {
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     padding: 10px;
-    color: #0f172a;
+    color: #111827;
 }
 QComboBox, QSpinBox, QDoubleSpinBox, QDateEdit {
     min-height: 36px;
 }
 QLabel {
-    color: #0f172a;
+    color: #111827;
 }
 QTableWidget {
     background: #ffffff;
     alternate-background-color: #f8fafc;
     border: 1px solid #cbd5e1;
-    color: #0f172a;
+    color: #111827;
 }
 QTableWidget::item {
-    color: #0f172a;
+    color: #111827;
 }
 QTableWidget::item:selected {
     background: #2563eb;
@@ -130,26 +130,26 @@ QTableWidget::item:selected {
 }
 QHeaderView::section {
     background: #e2e8f0;
-    color: #0f172a;
+    color: #111827;
     padding: 8px;
     border: 1px solid #cbd5e1;
 }
 QFrame {
     background: #f3f4f6;
-    color: #0f172a;
+    color: #111827;
 }
 QLabel#titleLabel {
     font-size: 20px;
     font-weight: bold;
-    color: #0f172a;
+    color: #111827;
 }
 QLabel#subtitleLabel {
     font-size: 14px;
-    color: #475569;
+    color: #1f2937;
 }
 QMessageBox, QMessageBox QLabel, QMessageBox QPushButton {
     background: #ffffff;
-    color: #0f172a;
+    color: #111827;
 }
 QMessageBox QPushButton {
     background: #e2e8f0;

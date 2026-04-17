@@ -1,5 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFrame, QStackedWidget
+from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt
 from app.ui.login_view import LoginView
 from app.ui.dashboard_view import DashboardView
@@ -45,6 +46,7 @@ class PosMainWindow(QMainWindow):
         self.sales_view.sale_completed.connect(self.product_view.refresh)
         self.product_view.product_changed.connect(self.sales_view.load_products)
         self.settings_view.theme_changed.connect(self.apply_theme)
+        self.settings_view.settings_updated.connect(self.on_settings_updated)
 
         self.stack.addWidget(self.dashboard_view)
         self.stack.addWidget(self.product_view)
@@ -56,6 +58,10 @@ class PosMainWindow(QMainWindow):
         self.sidebar = QFrame()
         self.sidebar.setFixedWidth(220)
         self.sidebar.setStyleSheet('background: #111827; color: #e2e8f0; border-right: 1px solid #334155;')
+
+        self.logo_label = QLabel()
+        self.logo_label.setFixedSize(48, 48)
+        self.logo_label.setScaledContents(True)
 
         self.title_label = QLabel('POS Central')
         self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #e2e8f0;')
@@ -92,6 +98,7 @@ class PosMainWindow(QMainWindow):
         self.set_sidebar_enabled(False)
 
         sidebar_layout = QVBoxLayout(self.sidebar)
+        sidebar_layout.addWidget(self.logo_label, alignment=Qt.AlignCenter)
         sidebar_layout.addWidget(self.title_label)
         sidebar_layout.addWidget(self.user_label)
         sidebar_layout.addWidget(self.btn_dashboard)
@@ -124,6 +131,7 @@ class PosMainWindow(QMainWindow):
         self.report_view.refresh()
         self.settings_view.set_current_user(user_info)
         self.set_sidebar_enabled(True)
+        self.on_settings_updated()
         self.apply_theme(self.current_theme)
         self.open_page(1)
 
@@ -171,6 +179,25 @@ class PosMainWindow(QMainWindow):
             self.btn_logout,
         ]:
             button.setStyleSheet(self.sidebar_button_style())
+        self.dashboard_view.apply_theme(theme)
+
+    def on_settings_updated(self):
+        logo_path = get_setting('business_logo_path') or ''
+        if logo_path:
+            pixmap = QPixmap(logo_path)
+            if not pixmap.isNull():
+                self.logo_label.setPixmap(pixmap.scaled(self.logo_label.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+                self.logo_label.setVisible(True)
+            else:
+                self.logo_label.clear()
+                self.logo_label.setVisible(False)
+        else:
+            self.logo_label.clear()
+            self.logo_label.setVisible(False)
+        if hasattr(self, 'login_view'):
+            self.login_view.load_logo()
+        if hasattr(self, 'dashboard_view'):
+            self.dashboard_view.load_logo()
 
     def logout(self):
         self.current_user = None

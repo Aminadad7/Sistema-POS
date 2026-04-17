@@ -8,6 +8,7 @@ from PySide6.QtWidgets import (
     QPushButton,
     QComboBox,
     QMessageBox,
+    QFileDialog,
     QTableWidget,
     QTableWidgetItem,
     QAbstractItemView,
@@ -20,6 +21,7 @@ from app.utils.settings_manager import get_setting, save_settings
 
 class SettingsView(QWidget):
     theme_changed = Signal(str)
+    settings_updated = Signal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -41,6 +43,10 @@ class SettingsView(QWidget):
         self.business_address_input.setPlaceholderText('Dirección del negocio')
         self.business_phone_input = QLineEdit()
         self.business_phone_input.setPlaceholderText('Teléfono del negocio')
+        self.business_logo_input = QLineEdit()
+        self.business_logo_input.setPlaceholderText('Ruta al logo del negocio')
+        self.browse_logo_button = QPushButton('Seleccionar logo')
+        self.browse_logo_button.clicked.connect(self.browse_logo_path)
         self.save_business_button = QPushButton('Guardar información del negocio')
         self.save_business_button.clicked.connect(self.save_business_name)
 
@@ -91,6 +97,11 @@ class SettingsView(QWidget):
         layout.addWidget(self.business_address_input)
         layout.addWidget(QLabel('Teléfono del negocio:'))
         layout.addWidget(self.business_phone_input)
+        layout.addWidget(QLabel('Logo del negocio:'))
+        logo_layout = QHBoxLayout()
+        logo_layout.addWidget(self.business_logo_input)
+        logo_layout.addWidget(self.browse_logo_button)
+        layout.addLayout(logo_layout)
         layout.addWidget(self.save_business_button)
         layout.addSpacing(12)
         layout.addWidget(QLabel('Tema de la aplicación:'))
@@ -130,9 +141,11 @@ class SettingsView(QWidget):
         address = get_setting('business_address') or ''
         phone = get_setting('business_phone') or ''
         theme = get_setting('theme') or 'dark'
+        logo_path = get_setting('business_logo_path') or ''
         self.business_name_input.setText(name)
         self.business_address_input.setText(address)
         self.business_phone_input.setText(phone)
+        self.business_logo_input.setText(logo_path)
         index = self.theme_selector.findData(theme)
         if index >= 0:
             self.theme_selector.setCurrentIndex(index)
@@ -156,6 +169,8 @@ class SettingsView(QWidget):
         self.selected_user_password.setEnabled(is_admin)
         self.update_user_button.setEnabled(is_admin)
         self.delete_user_button.setEnabled(is_admin)
+        self.business_logo_input.setReadOnly(not is_admin)
+        self.browse_logo_button.setEnabled(is_admin)
 
     def load_users(self):
         self.user_table.setRowCount(0)
@@ -230,12 +245,25 @@ class SettingsView(QWidget):
         if not name:
             QMessageBox.warning(self, 'Error', 'Ingrese un nombre válido para el negocio.')
             return
+        logo_path = self.business_logo_input.text().strip()
         save_settings({
             'business_name': name,
             'business_address': address,
             'business_phone': phone,
+            'business_logo_path': logo_path,
         })
         QMessageBox.information(self, 'Guardado', 'Información del negocio actualizada.')
+        self.settings_updated.emit()
+
+    def browse_logo_path(self):
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            'Seleccionar logo del negocio',
+            '',
+            'Images (*.png *.jpg *.jpeg *.bmp *.gif)'
+        )
+        if file_path:
+            self.business_logo_input.setText(file_path)
 
     def create_user(self):
         if not self.current_user or self.current_user.get('role') != 'admin':

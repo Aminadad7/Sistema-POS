@@ -1,7 +1,8 @@
 from datetime import datetime
-from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem, QDateEdit, QSizePolicy
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem, QDateEdit, QSizePolicy, QMessageBox
+from PySide6.QtCore import Qt, QUrl
 from PySide6.QtWidgets import QHeaderView
+from PySide6.QtGui import QDesktopServices
 from app.services.report_service import ReportService
 
 
@@ -29,6 +30,13 @@ class ReportView(QWidget):
         self.month_button.setEnabled(False)
         self.month_button.setToolTip('Solo administradores pueden ver ventas por mes')
 
+        self.all_invoices_button = QPushButton('Todas las facturas')
+        self.all_invoices_button.clicked.connect(self.load_all_sales)
+
+        self.download_invoice_button = QPushButton('Descargar factura seleccionada')
+        self.download_invoice_button.setEnabled(False)
+        self.download_invoice_button.clicked.connect(self.download_selected_invoice)
+
         self.sales_summary_label = QLabel('Resumen de ventas')
         self.sales_summary_label.setStyleSheet('font-size: 14pt; font-weight: bold; margin-top: 12px;')
 
@@ -48,6 +56,8 @@ class ReportView(QWidget):
         self.sales_table.verticalHeader().setVisible(False)
         self.sales_table.setAlternatingRowColors(True)
         self.sales_table.setStyleSheet('font-size: 12pt;')
+        self.sales_table.setSelectionBehavior(QTableWidget.SelectRows)
+        self.sales_table.itemSelectionChanged.connect(self.on_sale_selected)
 
         self.top_products_table = QTableWidget(0, 3)
         self.top_products_table.setHorizontalHeaderLabels(['Producto', 'Cantidad vendida', 'Gráfico %'])
@@ -62,6 +72,8 @@ class ReportView(QWidget):
         buttons_layout.addWidget(self.today_button)
         buttons_layout.addWidget(self.date_from)
         buttons_layout.addWidget(self.month_button)
+        buttons_layout.addWidget(self.all_invoices_button)
+        buttons_layout.addWidget(self.download_invoice_button)
 
         summary_layout = QVBoxLayout()
         summary_layout.addWidget(self.sales_summary_label)
@@ -113,6 +125,37 @@ class ReportView(QWidget):
         self.current_period_label.setText(f'Periodo actual: {date_selected.strftime("%B %Y")}')
         self.populate_sales_table(summary['sales'])
         self.populate_sales_summary(summary)
+
+    def load_all_sales(self):
+        sales = self.report_service.list_all_sales()
+        self.current_period_label.setText('Periodo actual: Todas las facturas')
+        self.populate_sales_table(sales)
+        self.populate_sales_summary({
+            'count': len(sales),
+            'total_sales': sum(sale.total for sale in sales),
+            'total_discounts': sum(max(0.0, sale.subtotal + sale.tax - sale.total) for sale in sales),
+            'total_tax': sum(sale.tax for sale in sales),
+        })
+
+    def on_sale_selected(self):
+        self.download_invoice_button.setEnabled(bool(self.sales_table.selectedItems()))
+
+    def download_selected_invoice(self):
+        selected_items = self.sales_table.selectedItems()
+        if not selected_items:
+            QMessageBox.warning(self, 'Factura no seleccionada', 'Seleccione una factura para descargar.')
+            return
+        sale_id = int(self.sales_table.item(selected_items[0].row(), 0).text())
+        sale = self.report_service.get_sale_by_id(sale_id)
+        if sale is None:
+            QMessageBox.warning(self, 'Error', 'No se encontró la venta seleccionada.')
+            return
+        invoice_data = self.report_service.build_invoice_data_from_sale(sale)
+        from app.utils.pdf_generator import generate_invoice_pdf
+        filename = f'{invoice_data["client_name"].strip().replace(" ", "_")}_{invoice_data["invoice_number"]}.pdf'
+        file_path = generate_invoice_pdf(invoice_data, filename=filename)
+        QMessageBox.information(self, 'Factura descargada', f'Factura generada en:\n{file_path}')
+        QDesktopServices.openUrl(QUrl.fromLocalFile(file_path))
 
     def populate_sales_summary(self, summary: dict):
         self.sale_count_label.setText(f'Cantidad de ventas: {summary["count"]}')

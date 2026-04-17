@@ -7,6 +7,7 @@ DEFAULT_SETTINGS = {
     'business_name': BUSINESS_NAME,
     'business_address': '',
     'business_phone': '',
+    'business_logo_path': '',
     'theme': 'dark',
 }
 

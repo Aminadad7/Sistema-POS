@@ -425,6 +425,7 @@ class SalesView(QWidget):
             'business_name': get_setting('business_name') or 'Mi Negocio',
             'business_address': get_setting('business_address') or '',
             'business_phone': get_setting('business_phone') or '',
+            'business_logo_path': get_setting('business_logo_path') or '',
             'client_name': client_name,
             'cashier': self.current_user['username'] if self.current_user else 'Desconocido',
             'payment_method': self.payment_method_input.currentText(),

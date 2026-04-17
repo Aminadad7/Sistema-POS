@@ -3,7 +3,7 @@ from pathlib import Path
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
 from app.utils.constants import BASE_DIR
 
 
@@ -74,11 +74,40 @@ def generate_invoice_pdf(invoice_data: dict, filename: str | None = None) -> str
     )
 
     story = []
-    story.append(Paragraph(invoice_data.get('business_name', 'Mi Negocio'), title_style))
-    if invoice_data.get('business_address'):
-        story.append(Paragraph(invoice_data.get('business_address'), contact_style))
-    if invoice_data.get('business_phone'):
-        story.append(Paragraph(f'Teléfono: {invoice_data.get("business_phone")}', contact_style))
+    logo_path = invoice_data.get('business_logo_path', '')
+    logo_table_data = []
+    if logo_path:
+        logo_file = Path(logo_path)
+        if logo_file.exists():
+            try:
+                logo_image = Image(str(logo_file), width=80, height=80)
+                business_info = [
+                    Paragraph(invoice_data.get('business_name', 'Mi Negocio'), title_style)
+                ]
+                if invoice_data.get('business_address'):
+                    business_info.append(Paragraph(invoice_data.get('business_address'), contact_style))
+                if invoice_data.get('business_phone'):
+                    business_info.append(Paragraph(f'Teléfono: {invoice_data.get("business_phone")}', contact_style))
+                logo_table_data.append([logo_image, business_info])
+            except Exception:
+                logo_table_data = []
+    if logo_table_data:
+        logo_table = Table(logo_table_data, colWidths=[90, 400])
+        logo_table.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+        ]))
+        story.append(logo_table)
+    else:
+        story.append(Paragraph(invoice_data.get('business_name', 'Mi Negocio'), title_style))
+        if invoice_data.get('business_address'):
+            story.append(Paragraph(invoice_data.get('business_address'), contact_style))
+        if invoice_data.get('business_phone'):
+            story.append(Paragraph(f'Teléfono: {invoice_data.get("business_phone")}', contact_style))
+    story.append(Spacer(1, 12))
     story.append(Paragraph('Factura', header_style))
     story.append(Spacer(1, 12))
     story.append(Paragraph(f'Nº de factura: {invoice_number}', normal_style))
