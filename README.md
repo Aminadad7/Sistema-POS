@@ -1,49 +1,97 @@
 # Sistema POS en Python con PySide6
 
-Sistema Punto de Venta modular y listo para producción construido con Python 3.11+, PySide6 y SQLAlchemy.
+Aplicación de Punto de Venta (POS) construida con Python 3.11+, PySide6 y SQLAlchemy. Incluye inventario, clientes, ventas, reportes, facturación en PDF y soporte de temas claros/oscuro.
+
+## Características principales
+
+- Gestión de productos, clientes y ventas.
+- Panel de control con estadísticas de ventas, clientes y productos.
+- Múltiples reportes: ventas de hoy, ventas por mes, ventas históricas.
+- Generación de facturas en PDF, incluyendo logo, datos del negocio y resumen de totales.
+- Soporte para tema `dark` y `light` con contraste mejorado en modo claro.
+- Configuración de negocio desde la UI: nombre, dirección, teléfono y logo.
+- Usuarios con permisos `admin` y `cajero`, control de creación/actualización de usuarios.
 
 ## Estructura del proyecto
 
-- `app/database`: configuración de base de datos y creación de tablas.
-- `app/models`: entidades del dominio.
+- `app/database`: configuración de base de datos, sesión y migraciones.
+- `app/models`: entidades del dominio del POS.
 - `app/repositories`: acceso a datos con patrón repository.
-- `app/services`: lógica de negocio y validaciones.
-- `app/ui`: vistas y ventanas de la aplicación.
-- `app/utils`: utilidades compartidas, seguridad, logs.
+- `app/services`: lógica de negocio, validaciones y reportes.
+- `app/ui`: vistas, ventanas y controles de la interfaz.
+- `app/utils`: utilidades compartidas, settings, PDF y constantes.
 
 ## Requisitos
 
-- Python 3.11+
-- Instalar dependencias:
+- Python 3.11 o superior
+- Dependencias del proyecto:
   ```bash
   python -m pip install -r requirements.txt
   ```
 
-## Primer arranque
+## Arranque rápido
 
-1. Crear la base de datos y usuario administrador:
+1. Inicializa la base de datos y crea el administrador:
    ```bash
    .venv\Scripts\python.exe run.py --init-db
    ```
 
-2. Ejecutar la aplicación:
+2. Inicia la aplicación:
    ```bash
    .venv\Scripts\python.exe run.py
    ```
 
-- En la vista de Ventas puedes generar una factura en PDF con el botón `Generar factura PDF`.
-- Al finalizar la venta, la factura también se guarda automáticamente en PDF.
+> Si usas PowerShell, puedes ejecutar `.
+un.ps1` si existe el script de arranque.
 
-> Si aparece `ModuleNotFoundError` para `PySide6` u otro paquete, asegúrate de usar el intérprete dentro de `.venv`.
-> También puedes ejecutar `run.bat` o `run.ps1` desde la carpeta del proyecto.
+## Uso básico
+
+- `Login`: ingresar con credenciales válidas para activar la navegación.
+- `Dashboard`: ver estadísticas clave y tablas con encabezados claros.
+- `Productos`: administrar inventario.
+- `Clientes`: administrar clientes registrados.
+- `Ventas`: agregar productos al carrito, aplicar descuentos, seleccionar cliente y generar factura en PDF.
+- `Reportes`: descargar facturas históricas y revisar resúmenes por periodo.
+- `Configuración`: cambiar tema, editar datos del negocio y cargar el logo para mostrarlo en la UI y facturas.
+
+## Configuración de logo y brand
+
+En `Configuración del Sistema` puedes:
+
+- Guardar nombre del negocio.
+- Guardar dirección y teléfono del negocio.
+- Seleccionar un archivo de logo para usar en:
+  - pantalla de login
+  - encabezado del dashboard
+  - barra lateral principal
+  - facturas PDF generadas
+
+## Generación de facturas PDF
+
+- Las facturas se generan desde la vista de `Ventas` con el botón `Generar factura PDF`.
+- También se generan automáticamente al finalizar una venta.
+- El PDF incluye:
+  - logo configurado (si existe)
+  - datos del negocio
+  - número de factura, fecha y cliente
+  - lista de productos, cantidad, precios y totales
+  - resumen de subtotal, descuento, ITBIS, total, pagado y cambio
 
 ## Usuario por defecto
 
 - Usuario: `admin`
-- Contraseña: ``
+- Contraseña: **consultar configuración o generar usuario administrativo en la inicialización**
 
-## Notas
+## Notas adicionales
 
-- Compatible con PyInstaller.
-- Preparado para migrar a PostgreSQL cambiando la URL de conexión en `app/database/session.py`.
-- Interfaz con navegación lateral, teclado rápido y manejo básico de ventas.
+- Compatible con PyInstaller y empaquetado distributivo.
+- Preparado para migrar a PostgreSQL cambiando la configuración de conexión en `app/database/session.py`.
+- Recomendado ejecutar desde el entorno virtual `.venv` para evitar conflictos de dependencias.
+- Si ves un error `ModuleNotFoundError`, asegúrate de activar el ambiente virtual antes de ejecutar la aplicación.
+
+## Más información
+
+- `app/ui/main_window.py`: control principal de navegación y aplicación de temas.
+- `app/ui/settings_view.py`: ajustes del negocio y selección de logo.
+- `app/utils/pdf_generator.py`: generación de facturas en PDF con logo.
+- `app/services/report_service.py`: construye datos para reportes y exportación de facturas.
