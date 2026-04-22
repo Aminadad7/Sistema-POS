@@ -38,9 +38,8 @@ class ProductView(QWidget):
 
         self.name_input = QLineEdit()
         self.name_input.setPlaceholderText('Nombre del producto')
-        self.sku_input = QLineEdit()
-        self.sku_input.setPlaceholderText('SKU generado automáticamente')
-        self.sku_input.setReadOnly(True)
+        self.sku_info_label = QLabel('SKU: se genera automáticamente')
+        self.sku_info_label.setStyleSheet('font-size: 10pt; color: #94a3b8;')
         self.price_input = QDoubleSpinBox()
         self.price_input.setPrefix('RD$ ')
         self.price_input.setDecimals(2)
@@ -69,7 +68,6 @@ class ProductView(QWidget):
 
         form_layout = QHBoxLayout()
         form_layout.addWidget(self.name_input)
-        form_layout.addWidget(self.sku_input)
         form_layout.addWidget(self.price_input)
         form_layout.addWidget(self.stock_input)
         form_layout.addWidget(self.category_input)
@@ -83,13 +81,18 @@ class ProductView(QWidget):
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         self.table.setMinimumHeight(320)
-        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
+        self.table.horizontalHeader().setStretchLastSection(True)
+        self.table.horizontalHeader().setMinimumSectionSize(95)
         self.table.verticalHeader().setVisible(False)
         self.table.setAlternatingRowColors(True)
+        self.table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
+        self.table.setWordWrap(False)
         self.table.itemSelectionChanged.connect(self.load_selection)
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.title_label)
+        layout.addWidget(self.sku_info_label)
         layout.addLayout(form_layout)
         layout.addWidget(self.permission_message)
         layout.addWidget(self.daily_sales_label)
@@ -133,7 +136,6 @@ class ProductView(QWidget):
         product = self.product_service.get_product_by_id(self.selected_product_id)
         if product:
             self.name_input.setText(product.name)
-            self.sku_input.setText(product.sku)
             self.price_input.setValue(product.price)
             self.stock_input.setValue(product.stock)
             if product.category_id:
@@ -160,7 +162,6 @@ class ProductView(QWidget):
     def apply_permissions(self):
         is_admin = bool(self.current_user and self.current_user.get('role') == 'admin')
         self.name_input.setReadOnly(not is_admin)
-        self.sku_input.setReadOnly(True)
         self.price_input.setEnabled(is_admin)
         self.stock_input.setEnabled(is_admin)
         self.category_input.setEnabled(is_admin)
@@ -231,7 +232,6 @@ class ProductView(QWidget):
     def clear_form(self):
         self.selected_product_id = None
         self.name_input.clear()
-        self.sku_input.clear()
         self.price_input.setValue(0.00)
         self.stock_input.setValue(0)
         self.category_input.setCurrentIndex(0)

@@ -8,10 +8,18 @@ class ClientRepository(BaseRepository):
     def __init__(self):
         super().__init__(SessionLocal())
 
+    def _refresh_for_read(self) -> None:
+        # Prevent stale SQLite reads from long-lived sessions.
+        if self.session.in_transaction():
+            self.session.rollback()
+        self.session.expire_all()
+
     def get_by_id(self, client_id: int) -> Client | None:
+        self._refresh_for_read()
         return self.session.get(Client, client_id)
 
     def list_all(self) -> list[Client]:
+        self._refresh_for_read()
         return self.session.query(Client).order_by(Client.name).all()
 
     def add(self, client: Client) -> Client:

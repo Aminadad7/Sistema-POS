@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QFrame, QPushButton, QTableWidget, QTableWidgetItem, QSizePolicy
+from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QFrame, QPushButton, QTableWidget, QTableWidgetItem, QSizePolicy, QAbstractItemView
 from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QHeaderView
@@ -54,7 +54,7 @@ class DashboardView(QWidget):
         self.client_stats_frame = QFrame()
         self.client_stats_frame.setStyleSheet(self.card_frame_style())
         self.client_stats_table = QTableWidget(0, 3)
-        # self.client_stats_table.setHorizontalHeaderLabels(['Cliente', 'Ventas', 'Total RD$'])
+        self.client_stats_table.setHorizontalHeaderLabels(['Cliente', 'Ventas', 'Total RD$'])
         self.configure_table(self.client_stats_table)
         self.setup_table_headers(self.client_stats_table, ['Cliente', 'Ventas', 'Total RD$'])
 
@@ -139,8 +139,11 @@ class DashboardView(QWidget):
 
     def configure_table(self, table: QTableWidget):
         table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        table.setMinimumHeight(220)
-        table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        table.setMinimumHeight(320)
+        table.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
+        table.horizontalHeader().setStretchLastSection(True)
+        table.horizontalHeader().setMinimumSectionSize(210)
+        table.horizontalHeader().setFixedHeight(74)
         table.horizontalHeader().setVisible(True)
         table.horizontalHeader().setHighlightSections(False)
         table.verticalHeader().setVisible(False)
@@ -149,6 +152,8 @@ class DashboardView(QWidget):
         table.setStyleSheet(self.table_style())
         table.horizontalHeader().setSectionsClickable(False)
         table.horizontalHeader().setDefaultAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
+        table.setWordWrap(False)
 
     def setup_table_headers(self, table: QTableWidget, headers: list[str]):
         for index, header_text in enumerate(headers):
@@ -178,22 +183,55 @@ class DashboardView(QWidget):
     def is_dark_theme(self) -> bool:
         return get_setting('theme') == 'dark'
 
+    def is_wine_theme(self) -> bool:
+        return get_setting('theme') == 'wine'
+
+    def is_wine_dark_theme(self) -> bool:
+        return get_setting('theme') == 'wine_dark'
+
+    def is_green_dark_theme(self) -> bool:
+        return get_setting('theme') == 'green_dark'
+
     def card_frame_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return 'background: #2b1a21; color: #f7edf1; border-radius: 12px; padding: 14px;'
+        if self.is_green_dark_theme():
+            return 'background: #152520; color: #e9f5ef; border-radius: 12px; padding: 14px;'
+        if self.is_wine_theme():
+            return 'background: #412730; color: #f6ebef; border-radius: 12px; padding: 14px;'
         if self.is_dark_theme():
             return 'background: #111827; color: #e2e8f0; border-radius: 12px; padding: 14px;'
         return 'background: #ffffff; color: #0f172a; border-radius: 12px; padding: 14px;'
 
     def summary_label_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return 'color: #fff7fa; font-size: 14pt; font-weight: bold;'
+        if self.is_green_dark_theme():
+            return 'color: #f3fffa; font-size: 14pt; font-weight: bold;'
+        if self.is_wine_theme():
+            return 'color: #fff7fa; font-size: 14pt; font-weight: bold;'
         if self.is_dark_theme():
             return 'color: #e2e8f0; font-size: 14pt; font-weight: bold;'
         return 'color: #111827; font-size: 14pt; font-weight: bold;'
 
     def subtitle_label_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return 'color: #d8bcc7; font-size: 11pt;'
+        if self.is_green_dark_theme():
+            return 'color: #bad7ca; font-size: 11pt;'
+        if self.is_wine_theme():
+            return 'color: #d9bcc8; font-size: 11pt;'
         if self.is_dark_theme():
             return 'color: #cbd5e1; font-size: 11pt;'
         return 'color: #6b7280; font-size: 11pt;'
 
     def section_title_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return 'color: #fff7fa; font-size: 13pt; font-weight: bold;'
+        if self.is_green_dark_theme():
+            return 'color: #f3fffa; font-size: 13pt; font-weight: bold;'
+        if self.is_wine_theme():
+            return 'color: #fff7fa; font-size: 13pt; font-weight: bold;'
         if self.is_dark_theme():
             return 'color: #e2e8f0; font-size: 13pt; font-weight: bold;'
         return 'color: #0f172a; font-size: 13pt; font-weight: bold;'
@@ -216,6 +254,57 @@ class DashboardView(QWidget):
             table.horizontalHeader().setStyleSheet(self.header_style())
 
     def table_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return '''
+                QTableWidget {
+                    background: #2b1a21;
+                    alternate-background-color: #322029;
+                    color: #f7edf1;
+                    gridline-color: #5f3b4a;
+                }
+                QHeaderView::section {
+                    background: #3e2732;
+                    color: #f7edf1;
+                    padding: 16px;
+                    font-size: 11pt;
+                    font-weight: 700;
+                    border: 1px solid #5f3b4a;
+                }
+            '''
+        if self.is_green_dark_theme():
+            return '''
+                QTableWidget {
+                    background: #152520;
+                    alternate-background-color: #1a2d27;
+                    color: #e9f5ef;
+                    gridline-color: #3e6757;
+                }
+                QHeaderView::section {
+                    background: #243a33;
+                    color: #e9f5ef;
+                    padding: 16px;
+                    font-size: 11pt;
+                    font-weight: 700;
+                    border: 1px solid #3e6757;
+                }
+            '''
+        if self.is_wine_theme():
+            return '''
+                QTableWidget {
+                    background: #3a2530;
+                    alternate-background-color: #432b37;
+                    color: #f6ebef;
+                    gridline-color: #785161;
+                }
+                QHeaderView::section {
+                    background: #533442;
+                    color: #f6ebef;
+                    padding: 16px;
+                    font-size: 11pt;
+                    font-weight: 700;
+                    border: 1px solid #785161;
+                }
+            '''
         if self.is_dark_theme():
             return '''
                 QTableWidget {
@@ -227,7 +316,9 @@ class DashboardView(QWidget):
                 QHeaderView::section {
                     background: #1e293b;
                     color: #e2e8f0;
-                    padding: 8px;
+                    padding: 16px;
+                    font-size: 11pt;
+                    font-weight: 700;
                     border: 1px solid #334155;
                 }
             '''
@@ -241,18 +332,48 @@ class DashboardView(QWidget):
             QHeaderView::section {
                 background: #e2e8f0;
                 color: #0f172a;
-                padding: 8px;
+                padding: 16px;
+                font-size: 11pt;
+                font-weight: 700;
                 border: 1px solid #cbd5e1;
             }
         '''
 
     def header_style(self) -> str:
+        if self.is_wine_dark_theme():
+            return '''
+                QHeaderView::section {
+                    background: #3e2732;
+                    color: #f7edf1;
+                    font-weight: bold;
+                    font-size: 11pt;
+                }
+            '''
+        if self.is_green_dark_theme():
+            return '''
+                QHeaderView::section {
+                    background: #243a33;
+                    color: #e9f5ef;
+                    font-weight: bold;
+                    font-size: 11pt;
+                }
+            '''
+        if self.is_wine_theme():
+            return '''
+                QHeaderView::section {
+                    background: #533442;
+                    color: #f6ebef;
+                    font-weight: bold;
+                    font-size: 11pt;
+                }
+            '''
         if self.is_dark_theme():
             return '''
                 QHeaderView::section {
                     background: #1e293b;
                     color: #e2e8f0;
                     font-weight: bold;
+                    font-size: 11pt;
                 }
             '''
         return '''
@@ -260,6 +381,7 @@ class DashboardView(QWidget):
                 background: #e2e8f0;
                 color: #0f172a;
                 font-weight: bold;
+                font-size: 11pt;
             }
         '''
 

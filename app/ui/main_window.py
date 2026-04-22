@@ -9,6 +9,7 @@ from app.ui.client_view import ClientView
 from app.ui.sales_view import SalesView
 from app.ui.report_view import ReportView
 from app.ui.settings_view import SettingsView
+from app.ui.user_view import UserView
 from app.ui.styles import get_theme_style
 from app.utils.settings_manager import get_setting
 
@@ -24,6 +25,7 @@ class PosMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.current_user = None
+        self.sidebar_collapsed = False
         self.setWindowTitle('POS - Sistema de Punto de Venta')
         self.setMinimumSize(1200, 720)
         self.setup_ui()
@@ -42,6 +44,7 @@ class PosMainWindow(QMainWindow):
         self.client_view = ClientView()
         self.sales_view = SalesView()
         self.report_view = ReportView()
+        self.user_view = UserView()
         self.settings_view = SettingsView()
         self.sales_view.sale_completed.connect(self.product_view.refresh)
         self.product_view.product_changed.connect(self.sales_view.load_products)
@@ -53,6 +56,7 @@ class PosMainWindow(QMainWindow):
         self.stack.addWidget(self.client_view)
         self.stack.addWidget(self.sales_view)
         self.stack.addWidget(self.report_view)
+        self.stack.addWidget(self.user_view)
         self.stack.addWidget(self.settings_view)
 
         self.sidebar = QFrame()
@@ -68,20 +72,28 @@ class PosMainWindow(QMainWindow):
         self.user_label = QLabel('No logueado')
         self.user_label.setStyleSheet('color: #94a3b8; margin: 0 12px 16px;')
 
+        self.sidebar_toggle_button = QPushButton('Ocultar menu')
+        self.sidebar_toggle_button.setCursor(Qt.PointingHandCursor)
+        self.sidebar_toggle_button.setFixedHeight(38)
+        self.sidebar_toggle_button.clicked.connect(self.toggle_sidebar)
+
         self.btn_dashboard = create_sidebar_button('Dashboard')
-        self.btn_products = create_sidebar_button('Lista deProductos')
+        self.btn_products = create_sidebar_button('Lista de productos')
         self.btn_clients = create_sidebar_button('Lista de Clientes')
         self.btn_sales = create_sidebar_button('Crear Ventas')
         self.btn_reports = create_sidebar_button('Inventarios')
+        self.btn_users = create_sidebar_button('Usuarios')
         self.btn_settings = create_sidebar_button('Configuración')
         self.btn_logout = create_sidebar_button('Cerrar sesión')
 
         for button in [
+            self.sidebar_toggle_button,
             self.btn_dashboard,
             self.btn_products,
             self.btn_clients,
             self.btn_sales,
             self.btn_reports,
+            self.btn_users,
             self.btn_settings,
             self.btn_logout,
         ]:
@@ -92,12 +104,14 @@ class PosMainWindow(QMainWindow):
         self.btn_clients.clicked.connect(lambda: self.open_page(3))
         self.btn_sales.clicked.connect(lambda: self.open_page(4))
         self.btn_reports.clicked.connect(lambda: self.open_page(5))
-        self.btn_settings.clicked.connect(lambda: self.open_page(6))
+        self.btn_users.clicked.connect(lambda: self.open_page(6))
+        self.btn_settings.clicked.connect(lambda: self.open_page(7))
         self.btn_logout.clicked.connect(self.logout)
 
         self.set_sidebar_enabled(False)
 
         sidebar_layout = QVBoxLayout(self.sidebar)
+        sidebar_layout.addWidget(self.sidebar_toggle_button)
         sidebar_layout.addWidget(self.logo_label, alignment=Qt.AlignCenter)
         sidebar_layout.addWidget(self.title_label)
         sidebar_layout.addWidget(self.user_label)
@@ -106,6 +120,7 @@ class PosMainWindow(QMainWindow):
         sidebar_layout.addWidget(self.btn_clients)
         sidebar_layout.addWidget(self.btn_sales)
         sidebar_layout.addWidget(self.btn_reports)
+        sidebar_layout.addWidget(self.btn_users)
         sidebar_layout.addWidget(self.btn_settings)
         sidebar_layout.addStretch(1)
         sidebar_layout.addWidget(self.btn_logout)
@@ -129,6 +144,7 @@ class PosMainWindow(QMainWindow):
         self.sales_view.set_current_user(user_info)
         self.report_view.set_current_user(user_info)
         self.report_view.refresh()
+        self.user_view.set_current_user(user_info)
         self.settings_view.set_current_user(user_info)
         self.set_sidebar_enabled(True)
         self.on_settings_updated()
@@ -144,6 +160,7 @@ class PosMainWindow(QMainWindow):
             return
         if index == 4:
             self.sales_view.load_products()
+            self.sales_view.load_clients()
         self.stack.setCurrentIndex(index)
 
     def set_sidebar_enabled(self, enabled: bool):
@@ -153,6 +170,7 @@ class PosMainWindow(QMainWindow):
             self.btn_clients,
             self.btn_sales,
             self.btn_reports,
+            self.btn_users,
             self.btn_settings,
             self.btn_logout,
         ]:
@@ -165,21 +183,51 @@ class PosMainWindow(QMainWindow):
             self.sidebar.setStyleSheet('background: #e2e8f0; color: #0f172a; border-right: 1px solid #94a3b8;')
             self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #0f172a;')
             self.user_label.setStyleSheet('color: #475569; margin: 0 12px 16px;')
+        elif theme == 'wine_dark':
+            self.sidebar.setStyleSheet('background: #2b1a21; color: #f7edf1; border-right: 1px solid #5f3b4a;')
+            self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #fff7fa;')
+            self.user_label.setStyleSheet('color: #d8bcc7; margin: 0 12px 16px;')
+        elif theme == 'green_dark':
+            self.sidebar.setStyleSheet('background: #152520; color: #e9f5ef; border-right: 1px solid #3e6757;')
+            self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #f3fffa;')
+            self.user_label.setStyleSheet('color: #bad7ca; margin: 0 12px 16px;')
+        elif theme == 'wine':
+            self.sidebar.setStyleSheet('background: #412730; color: #f6ebef; border-right: 1px solid #785161;')
+            self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #fff7fa;')
+            self.user_label.setStyleSheet('color: #d9bcc8; margin: 0 12px 16px;')
         else:
             self.sidebar.setStyleSheet('background: #111827; color: #e2e8f0; border-right: 1px solid #334155;')
             self.title_label.setStyleSheet('font-size: 18px; font-weight: bold; margin: 12px; color: #e2e8f0;')
             self.user_label.setStyleSheet('color: #94a3b8; margin: 0 12px 16px;')
         for button in [
+            self.sidebar_toggle_button,
             self.btn_dashboard,
             self.btn_products,
             self.btn_clients,
             self.btn_sales,
             self.btn_reports,
+            self.btn_users,
             self.btn_settings,
             self.btn_logout,
         ]:
             button.setStyleSheet(self.sidebar_button_style())
         self.dashboard_view.apply_theme(theme)
+
+    def toggle_sidebar(self):
+        self.sidebar_collapsed = not self.sidebar_collapsed
+        self.logo_label.setVisible(not self.sidebar_collapsed)
+        self.title_label.setVisible(not self.sidebar_collapsed)
+        self.user_label.setVisible(not self.sidebar_collapsed)
+        self.btn_dashboard.setText('D' if self.sidebar_collapsed else 'Dashboard')
+        self.btn_products.setText('P' if self.sidebar_collapsed else 'Lista de productos')
+        self.btn_clients.setText('C' if self.sidebar_collapsed else 'Lista de Clientes')
+        self.btn_sales.setText('V' if self.sidebar_collapsed else 'Crear Ventas')
+        self.btn_reports.setText('I' if self.sidebar_collapsed else 'Inventarios')
+        self.btn_users.setText('U' if self.sidebar_collapsed else 'Usuarios')
+        self.btn_settings.setText('S' if self.sidebar_collapsed else 'Configuración')
+        self.btn_logout.setText('X' if self.sidebar_collapsed else 'Cerrar sesión')
+        self.sidebar_toggle_button.setText('☰' if self.sidebar_collapsed else 'Ocultar menu')
+        self.sidebar.setFixedWidth(70 if self.sidebar_collapsed else 220)
 
     def on_settings_updated(self):
         logo_path = get_setting('business_logo_path') or ''

@@ -89,6 +89,22 @@ En `Configuración del Sistema` puedes:
 - Recomendado ejecutar desde el entorno virtual `.venv` para evitar conflictos de dependencias.
 - Si ves un error `ModuleNotFoundError`, asegúrate de activar el ambiente virtual antes de ejecutar la aplicación.
 
+## Instalador tipo wizard (Windows)
+
+Para generar un instalador con asistente (pantallas de "Siguiente") se usa Inno Setup.
+
+1. Instala Inno Setup 6 (debe existir `ISCC.exe`).
+2. Ejecuta:
+  ```powershell
+  .\build_installer.ps1
+  ```
+
+Este script:
+
+- Genera el ejecutable con PyInstaller en `dist_installer/run`.
+- Compila el instalador usando `installer/SistemaPOS.iss`.
+- Deja el instalador en `installer/output/SistemaPOS-Setup.exe`.
+
 ## Más información
 
 - `app/ui/main_window.py`: control principal de navegación y aplicación de temas.
